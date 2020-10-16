@@ -11,8 +11,7 @@ language governing permissions and limitations under the license.
 using UnityEngine;
 using System.Collections;
 
-namespace OculusSampleFramework
-{
+
     public class GrabbableCrosshair : MonoBehaviour
     {
         public enum CrosshairState { Disabled, Enabled, Targeted }
@@ -47,6 +46,7 @@ namespace OculusSampleFramework
             {
                 m_targetedCrosshair.SetActive(true);
                 m_enabledCrosshair.SetActive(false);
+               
             }
         }
 
@@ -58,4 +58,4 @@ namespace OculusSampleFramework
             }
         }
     }
-}
+

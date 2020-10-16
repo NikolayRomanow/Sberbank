@@ -29,7 +29,7 @@ public class OVRGrabbable : MonoBehaviour
     [SerializeField]
     protected bool m_snapOrientation = false;
     [SerializeField]
-    protected Transform m_snapOffset;
+    public Transform m_snapOffset;
     [SerializeField]
     protected Collider[] m_grabPoints = null;
 
@@ -37,9 +37,34 @@ public class OVRGrabbable : MonoBehaviour
     protected Collider m_grabbedCollider = null;
     protected OVRGrabber m_grabbedBy = null;
 
-	/// <summary>
-	/// If true, the object can currently be grabbed.
-	/// </summary>
+    /// <summary>
+    /// If true, the object can currently be grabbed.
+    /// </summary>
+    /// 
+
+    public short canBe = 0;
+    public void MovementCoin(GameObject coin)
+    {
+        coin.transform.position = Vector3.MoveTowards(coin.transform.position, new Vector3(coin.transform.position.x, coin.transform.position.y, 0.9f), Time.deltaTime/10);
+        if (coin.transform.position.z == 0.9f)
+            canBe = 0;
+    }
+
+    public void MovementCoinReturn(GameObject coin)
+    {
+        coin.transform.position = Vector3.MoveTowards(coin.transform.position, new Vector3(coin.transform.position.x, coin.transform.position.y, 0.8776414f), Time.deltaTime / 10);
+        if (coin.transform.position.z == 0.8776414f)
+            canBe = 0;
+    }
+
+    private void Update()
+    {
+        if (canBe == 1)
+            MovementCoin(this.gameObject);
+        if (canBe == 2)
+            MovementCoinReturn(this.gameObject);
+    }
+
     public bool allowOffhandGrab
     {
         get { return m_allowOffhandGrab; }

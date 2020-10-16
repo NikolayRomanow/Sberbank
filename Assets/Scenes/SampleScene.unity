@@ -335,6 +335,10 @@ MonoBehaviour:
   m_controller: 1
   m_parentTransform: {fileID: 8412421283173543490}
   m_player: {fileID: 8412421283709624976}
+  SnapOffsetCoinLeft: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
+    type: 3}
+  SnapOffsetCoinRight: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+    type: 3}
   m_spherecastRadius: 0.15
   m_noSnapThreshhold: 0.05
   m_useSpherecast: 0
@@ -2023,7 +2027,7 @@ GameObject:
   - component: {fileID: 114956353538761408}
   m_Layer: 2
   m_Name: DistanceGrabHandRight
-  m_TagString: Untagged
+  m_TagString: RightHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3012,7 +3016,7 @@ GameObject:
   - component: {fileID: 312803238}
   m_Layer: 2
   m_Name: DistanceGrabHandLeft
-  m_TagString: Untagged
+  m_TagString: LeftHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5625,6 +5629,10 @@ MonoBehaviour:
   m_controller: 2
   m_parentTransform: {fileID: 8412421283931136569}
   m_player: {fileID: 8412421283709624976}
+  SnapOffsetCoinLeft: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
+    type: 3}
+  SnapOffsetCoinRight: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+    type: 3}
   m_spherecastRadius: 0.15
   m_noSnapThreshhold: 0.05
   m_useSpherecast: 0
@@ -6962,9 +6970,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132147529314194
 BoxCollider:
@@ -7047,9 +7056,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132147560816528
 BoxCollider:
@@ -7132,9 +7142,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132147575264601
 BoxCollider:
@@ -7217,9 +7228,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132147653338652
 BoxCollider:
@@ -7302,9 +7314,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132147959693290
 BoxCollider:
@@ -7387,9 +7400,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132148076527659
 BoxCollider:
@@ -7472,9 +7486,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132148508595094
 BoxCollider:
@@ -7557,9 +7572,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132148630467790
 BoxCollider:
@@ -7642,9 +7658,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132148651986909
 BoxCollider:
@@ -7727,9 +7744,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132148706551067
 BoxCollider:
@@ -7812,9 +7830,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132148786270600
 BoxCollider:
@@ -7897,9 +7916,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132148822526917
 BoxCollider:
@@ -7982,9 +8002,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132148899055384
 BoxCollider:
@@ -8067,9 +8088,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132149045249067
 BoxCollider:
@@ -8152,9 +8174,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132149052877977
 BoxCollider:
@@ -8237,9 +8260,10 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 2583703637786887937, guid: 4dd530423d7e9c44cbb5ce41e14bd14c,
+  m_snapOffset: {fileID: 2583703637786887937, guid: f8ca3b4d80ece064ba37d8caf5c0fe72,
     type: 3}
   m_grabPoints: []
+  canBe: 0
   m_materialColorField: 
 --- !u!65 &919132149138826675
 BoxCollider:
@@ -24046,9 +24070,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d153878a9f7eb45b0e02c0c739029a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OutlineColorInRange: {r: 0, g: 0, b: 0, a: 0}
-  OutlineColorHighlighted: {r: 0, g: 0, b: 0, a: 0}
-  OutlineColorOutOfRange: {r: 0, g: 0, b: 0, a: 0}
+  OutlineColorInRange: {r: 1, g: 1, b: 1, a: 0}
+  OutlineColorHighlighted: {r: 1, g: 0, b: 0, a: 0}
+  OutlineColorOutOfRange: {r: 0.4056387, g: 0, b: 1, a: 0}
 --- !u!4 &8412421284893115072
 Transform:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR COND
 ANY KIND, either express or implied. See the License for the specific language governing
 permissions and limitations under the License.
 ************************************************************************************/
-
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -190,6 +189,7 @@ public class OVRGrabber : MonoBehaviour
         int refCount = 0;
         m_grabCandidates.TryGetValue(grabbable, out refCount);
         m_grabCandidates[grabbable] = refCount + 1;
+        //grabbable.gameObject.transform.position = Vector3.MoveTowards(grabbable.gameObject.transform.position, new Vector3(grabbable.gameObject.transform.position.x, grabbable.gameObject.transform.position.y, 0.9272f), Time.deltaTime);
     }
 
     void OnTriggerExit(Collider otherCollider)
@@ -212,6 +212,7 @@ public class OVRGrabber : MonoBehaviour
         else
         {
             m_grabCandidates.Remove(grabbable);
+            //grabbable.gameObject.transform.position = Vector3.MoveTowards(grabbable.gameObject.transform.position, new Vector3(grabbable.gameObject.transform.position.x, grabbable.gameObject.transform.position.y, 0.8776414f), Time.deltaTime);
         }
     }
 
@@ -232,7 +233,6 @@ public class OVRGrabber : MonoBehaviour
         float closestMagSq = float.MaxValue;
 		OVRGrabbable closestGrabbable = null;
         Collider closestGrabbableCollider = null;
-
         // Iterate grab candidates and find the closest grabbable candidate
 		foreach (OVRGrabbable grabbable in m_grabCandidates.Keys)
         {

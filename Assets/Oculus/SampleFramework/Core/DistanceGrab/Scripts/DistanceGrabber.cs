@@ -25,6 +25,7 @@ namespace OculusSampleFramework
     [RequireComponent(typeof(Rigidbody))]
     public class DistanceGrabber : OVRGrabber
     {
+        public Transform SnapOffsetCoinLeft, SnapOffsetCoinRight;
         // Radius of sphere used in spherecast from hand along forward ray to find target object.
         [SerializeField]
         float m_spherecastRadius = 0;
@@ -154,6 +155,11 @@ namespace OculusSampleFramework
                 m_movingObjectToHand = true;
                 m_lastPos = transform.position;
                 m_lastRot = transform.rotation;
+
+                if (this.CompareTag("LeftHand"))
+                    m_grabbedObj.m_snapOffset = SnapOffsetCoinLeft;
+                if (this.CompareTag("RightHand"))
+                    m_grabbedObj.m_snapOffset = SnapOffsetCoinRight;
 
                 // If it's within a certain distance respect the no-snap.
                 Vector3 closestPointOnBounds = closestGrabbableCollider.ClosestPointOnBounds(m_gripTransform.position);
