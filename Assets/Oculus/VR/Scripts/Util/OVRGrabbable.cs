@@ -33,6 +33,7 @@ public class OVRGrabbable : MonoBehaviour
     [SerializeField]
     protected Collider[] m_grabPoints = null;
 
+    public bool onShowCase = true;
     protected bool m_grabbedKinematic = false;
     protected Collider m_grabbedCollider = null;
     protected OVRGrabber m_grabbedBy = null;
@@ -42,28 +43,7 @@ public class OVRGrabbable : MonoBehaviour
     /// </summary>
     /// 
 
-    public short canBe = 0;
-    public void MovementCoin(GameObject coin)
-    {
-        coin.transform.position = Vector3.MoveTowards(coin.transform.position, new Vector3(coin.transform.position.x, coin.transform.position.y, 0.9f), Time.deltaTime/10);
-        if (coin.transform.position.z == 0.9f)
-            canBe = 0;
-    }
-
-    public void MovementCoinReturn(GameObject coin)
-    {
-        coin.transform.position = Vector3.MoveTowards(coin.transform.position, new Vector3(coin.transform.position.x, coin.transform.position.y, 0.8776414f), Time.deltaTime / 10);
-        if (coin.transform.position.z == 0.8776414f)
-            canBe = 0;
-    }
-
-    private void Update()
-    {
-        if (canBe == 1)
-            MovementCoin(this.gameObject);
-        if (canBe == 2)
-            MovementCoinReturn(this.gameObject);
-    }
+    
 
     public bool allowOffhandGrab
     {
@@ -149,6 +129,7 @@ public class OVRGrabbable : MonoBehaviour
 	/// </summary>
 	virtual public void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
+        onShowCase = false;
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
         rb.isKinematic = m_grabbedKinematic;
         rb.velocity = linearVelocity;

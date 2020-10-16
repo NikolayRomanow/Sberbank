@@ -22,6 +22,7 @@ namespace OculusSampleFramework
     /// <summary>
     /// Allows grabbing and throwing of objects with the DistanceGrabbable component on them.
     /// </summary>
+    ///
     [RequireComponent(typeof(Rigidbody))]
     public class DistanceGrabber : OVRGrabber
     {
@@ -138,7 +139,7 @@ namespace OculusSampleFramework
         {
             DistanceGrabbable closestGrabbable = m_target;
             Collider closestGrabbableCollider = m_targetCollider;
-
+            closestGrabbable.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             GrabVolumeEnable(false);
 
             if (closestGrabbable != null)
