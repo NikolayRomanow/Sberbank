@@ -15,6 +15,8 @@ using System.Collections;
 public class GrabbableCrosshair : MonoBehaviour
 {
     public enum CrosshairState { Disabled, Enabled, Targeted }
+    public AudioSource CoinSource;
+    public AudioClip CoinSound;
 
     CrosshairState m_state = CrosshairState.Disabled;
     Transform m_centerEyeAnchor;
@@ -59,7 +61,9 @@ public class GrabbableCrosshair : MonoBehaviour
         if (coin.transform.position.z == 0.9f)
         {
             canBe = -1;
-        }   
+            CoinSource.PlayOneShot(CoinSound);
+        }
+
     }
 
     public void MovementCoinReturn(Transform coin)
