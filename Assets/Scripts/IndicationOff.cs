@@ -9,7 +9,7 @@ public class IndicationOff : MonoBehaviour
 
     private void Update()
     {
-        if (OVRInput.Get(OVRInput.Button.Any))
+        if (OVRInput.Get(OVRInput.Button.Any) && LocalAvatar.activeSelf)
         {
             StartCoroutine(StopIndication());
             StartCoroutine(ReplacementHand());
